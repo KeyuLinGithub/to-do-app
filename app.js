@@ -29,7 +29,12 @@ function onReady() {
     let d = document.createElement('button');
     d.innerHTML = 'delete';
     d.addEventListener("click", function(){
-      toDoList.removeChild(newLi);
+      if(checkbox.checked){
+        toDoList.removeChild(newLi);
+      }else{
+        alert("This to-do is not checked");
+      }
+
     });
     newLi.appendChild(d);
     // attach the li to the ul
