@@ -5,6 +5,7 @@ function onReady() {
   if(localStorage.getItem("arr")){
     var toDos_str=localStorage.getItem("arr");
     toDos=JSON.parse(toDos_str);
+    id=toDos.length;
   }
   const addToDoForm = document.getElementById('addToDoForm');
   const newToDoText = document.getElementById('newToDoText');
